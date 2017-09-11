@@ -1,0 +1,12 @@
+Description:
+
+The preProcess.py takes folder path as input and generates a preprocessed set of documents under that folder.
+It performs the following operations on the text document :
+1. Trims special characters including periods
+2. Trims tabs, blank spaces and newlines
+3. Removes stopwords
+4. Spell check and rectification
+5. Lemaatizes the words
+6. Stemming
+
+Post these operations, the generated documents are fully preprocessed.
