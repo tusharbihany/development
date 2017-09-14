@@ -43,7 +43,7 @@ vectorizer = TfidfVectorizer(min_df=1)
 corpus = []
 
 #Iterate thorugh all the folders(1,2,3 ...)
-for i in range(1,31):   
+for i in range(1,60):   
     path = r'../preprocessed/'+str(i)+'/*'
     files = glob.glob(path)
     for currentfile in files:
@@ -66,7 +66,7 @@ featureDocuments.append([])
 featureDocuments.append([])
 
 #Iterate thorugh all the folders(1,2,3 ...)
-for i in range(1,31):
+for i in range(1,60):
     path = r'../preprocessed/'+str(i)+'/*'
     os.mkdir("../generateddocs/"+str(i))
     files = glob.glob(path)
@@ -100,13 +100,13 @@ for i in range(1,31):
                 if lemmatizer.lemmatize(derivedwords) in filecontent and lemmatizer.lemmatize(derivedwords) is not w:
                     newfilecontent = newfilecontent + w + " "               
             if newfilecontent:
-                newfile = open("/../generateddocs/"+str(i)+"/"+str(counter),'w')
+                newfile = open("../generateddocs/"+str(i)+"/"+str(counter),'w+')
                 newfile.write(newfilecontent)
                 newfile.close()
                 isFeatureFile = True
     
         if isFeatureFile: 
-            featureFile = open("/../generateddocs/"+str(i)+"/"+str(counter),'r')
+            featureFile = open("../generateddocs/"+str(i)+"/"+str(counter),'r')
             featureFileContent = featureFile.read()
             featureDocuments[0].append(featureFileContent)
             featureDocuments[1].append(i)
