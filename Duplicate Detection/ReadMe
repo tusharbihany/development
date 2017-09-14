@@ -10,3 +10,7 @@ Here are the steps how it operates:
 4. Check for various similarity measures for each document with the other documents in the dataset.
 5. Train a SVM with these similarity values and the target matrix(Class labels, whether the pair is duplicate or not) (One can try alogrithms other than SVM).
 6. Check for accuracy.
+
+
+Results:
+DUC 2002 dataset : 78% Accuracy
