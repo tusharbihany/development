@@ -1,0 +1,12 @@
+Description:
+
+The duplicateDetection.py is an algorithm to test for duplicate page detection.
+
+Here are the steps how it operates:
+
+1. Create a document corpus from a preprocessed Dataset.
+2. Select top n features based on idf values ( One can change the value of n and can use any other metric than idf values).
+3. Generate a new dataset based on the feature subset and the semantic derivates of these features.
+4. Check for various similarity measures for each document with the other documents in the dataset.
+5. Train a SVM with these similarity values and the target matrix(Class labels, whether the pair is duplicate or not) (One can try alogrithms other than SVM).
+6. Check for accuracy.
