@@ -16,7 +16,7 @@ stop = stopwords.words('english')
 #Initialize a lemmatizer
 lemmatizer = WordNetLemmatizer()
 
-#Iterate through all the folders
+#Iterate thorugh all the folders(1,2,3 ...)
 for i in range(1,2):
 	#Input path	
 	path = r'./Sample/'+str(i)+"/"+str(i)
@@ -43,7 +43,7 @@ for i in range(1,2):
 		filecontentclean3 = re.sub('[\t|\n]+',' ',filecontentclean2)
 		#Trimming multiple spaces
 		filecontentclean4 = re.sub(' +',' ',filecontentclean3)
-		#Loop through all the terms and chech for stopwords
+		#Loop through all the terms and check for stopwords
 		for term in [j for j in filecontentclean4.split() if j not in stop][2:]:
 			#Spell check and length > 2
 			if spellcheck.check(term) and len(term)>2:
